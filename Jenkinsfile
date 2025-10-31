@@ -18,5 +18,10 @@ pipeline {
                 bat 'kubectl apply -f D:/devops/Week-2/service.yaml'
             }
         }
+        stage('Automated UI Test') {
+            steps {
+                bat 'python D:/devops/Week-2/test_registration.py'
+            }
+        }
     }
 }
